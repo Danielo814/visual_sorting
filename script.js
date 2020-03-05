@@ -21,8 +21,6 @@ function startAnimation(element, index, timer) {
 
     let nextDigit = parseInt(elements[index + 1].innerHTML, 10);
     if (digit > nextDigit) {
-      // elements[index + 1].classList.add("blue-square");
-      // element.classList.add("silver-square");
       var swaptimer = setTimeout(function() {
         element.innerHTML = nextDigit;
         elements[index + 1].innerHTML = digit;

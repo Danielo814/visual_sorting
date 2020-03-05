@@ -11,10 +11,6 @@ function init() {
   }
 }
 
-// for (let i = 0; i < elements.length; i++) {
-//   startAnimation(elements[i], i);
-// }
-
 function startAnimation(element, index, timer) {
   setTimeout(function() {
     if (index > 0) {

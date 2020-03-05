@@ -26,8 +26,6 @@ function startAnimation(element, index, timer) {
         elements[index + 1].innerHTML = digit;
         element.classList.add("blue-square")
       }, 1000);
-      // element.innerHTML = nextDigit;
-      // elements[index + 1].innerHTML = digit;
     }
     element.classList.add("active");
   }, 1500 * timer);

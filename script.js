@@ -16,11 +16,6 @@ function init() {
 // }
 
 function startAnimation(element, index, timer) {
-  // if (index === 10) {
-  //   var test = index;
-  // }
-  // test = test + 1;
-  // console.log(test);
   setTimeout(function() {
     if (index > 0) {
       elements[index - 1].classList.remove("red-square");

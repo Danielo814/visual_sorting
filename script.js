@@ -12,9 +12,7 @@ function init() {
 
 function startAnimation(element, index, timer) {
   var sort = setTimeout(function() {
-    // elements[index - 1].classList.remove("blue-square");
     if (index > 0) {
-      // elements[index - 1].classList.remove("silver-square");
       elements[index - 1].classList.remove("active", "blue-square");
     }
     let digit = parseInt(element.innerHTML, 10);
@@ -24,7 +22,7 @@ function startAnimation(element, index, timer) {
       var swaptimer = setTimeout(function() {
         element.innerHTML = nextDigit;
         elements[index + 1].innerHTML = digit;
-        element.classList.add("blue-square")
+        element.classList.add("blue-square");
       }, 1000);
     }
     element.classList.add("active");

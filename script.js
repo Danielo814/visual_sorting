@@ -12,21 +12,26 @@ function init() {
 
 function startAnimation(element, index, timer) {
   var sort = setTimeout(function() {
+    if (index === 0) {
+      elements[10].classList.remove("active");
+    }
     if (index > 0) {
       elements[index - 1].classList.remove("active", "blue-square");
     }
-    let digit = parseInt(element.innerHTML, 10);
+    if (index !== 10) {
+      let digit = parseInt(element.innerHTML, 10);
 
-    let nextDigit = parseInt(elements[index + 1].innerHTML, 10);
-    if (digit > nextDigit) {
-      var swaptimer = setTimeout(function() {
-        element.innerHTML = nextDigit;
-        elements[index + 1].innerHTML = digit;
-        element.classList.add("blue-square");
-      }, 1000);
+      let nextDigit = parseInt(elements[index + 1].innerHTML, 10);
+      if (digit > nextDigit) {
+        var swaptimer = setTimeout(function() {
+          element.classList.add("blue-square");
+          element.innerHTML = nextDigit;
+          elements[index + 1].innerHTML = digit;
+        }, 1200);
+      }
     }
     element.classList.add("active");
-  }, 1500 * timer);
+  }, 1800 * timer);
 }
 
 function myStopFunction(sorter) {

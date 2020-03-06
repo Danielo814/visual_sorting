@@ -19,10 +19,6 @@ function checkClasses(index) {
   index === 0
     ? elements[10].classList.remove("active")
     : elements[index - 1].classList.remove("active", "blue-square");
-  // if (index === 0) {
-  //   elements[10].classList.remove("active");
-  // }
-  
 }
 
 function startAnimation(element, index, timer) {

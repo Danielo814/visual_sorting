@@ -15,14 +15,18 @@ function swapElements(element, digit, nextDigit, index) {
   elements[index + 1].innerHTML = digit;
 };
 
+function checkClasses(index) {
+  if (index === 0) {
+    elements[10].classList.remove("active");
+  }
+  if (index > 0) {
+    elements[index - 1].classList.remove("active", "blue-square");
+  }
+}
+
 function startAnimation(element, index, timer) {
   var sort = setTimeout(function() {
-    if (index === 0) {
-      elements[10].classList.remove("active");
-    }
-    if (index > 0) {
-      elements[index - 1].classList.remove("active", "blue-square");
-    }
+    
     if (index !== 10) {
       let digit = parseInt(element.innerHTML, 10);
       let nextDigit = parseInt(elements[index + 1].innerHTML, 10);

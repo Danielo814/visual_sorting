@@ -1,0 +1,32 @@
+.row {
+  height: 50px;
+  justify-content: center;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  box-shadow: 1px 1px 6px 3px #888888;
+  line-height: 50px;
+  width: 50px;
+  margin: 10px;
+  border: 1px solid black;
+}
+.active {
+  margin-top: -80px;
+  transition: margin 1.5s;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.blue-square {
+  background-color: #7fdbff;
+}
+.flex-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}

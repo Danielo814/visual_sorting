@@ -9,11 +9,11 @@ function init() {
   }
 }
 
-function swapElements(element) {
+swapElements = element => {
   element.classList.add("blue-square");
   element.innerHTML = nextDigit;
   elements[index + 1].innerHTML = digit;
-}
+};
 
 function startAnimation(element, index, timer) {
   var sort = setTimeout(function() {
@@ -28,16 +28,12 @@ function startAnimation(element, index, timer) {
       let nextDigit = parseInt(elements[index + 1].innerHTML, 10);
       if (digit > nextDigit) {
         var swaptimer = setTimeout(function() {
-          swapElements(element)
+          swapElements(element);
         }, 1200);
       }
-    }
-    if (sorted === true) {
-      clearTimeout(sort);
     }
     element.classList.add("active");
   }, 1800 * timer);
 }
-
 
 init();

@@ -34,7 +34,7 @@ function startAnimation(element, index, timer) {
       }
     }
     element.classList.add("active");
-  }, 1900 * timer);
+  }, 1800 * timer);
 }
 
 init();

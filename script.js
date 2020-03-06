@@ -9,6 +9,10 @@ function init() {
   }
 }
 
+function swapElements(element) {
+
+}
+
 function startAnimation(element, index, timer) {
   var sort = setTimeout(function() {
     if (index === 0) {

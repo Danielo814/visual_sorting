@@ -9,7 +9,7 @@ function init() {
   }
 }
 
-swapElements = element => {
+function swapElements(element, digit, nextDigit, index) {
   element.classList.add("blue-square");
   element.innerHTML = nextDigit;
   elements[index + 1].innerHTML = digit;
@@ -28,7 +28,7 @@ function startAnimation(element, index, timer) {
       let nextDigit = parseInt(elements[index + 1].innerHTML, 10);
       if (digit > nextDigit) {
         var swaptimer = setTimeout(function() {
-          swapElements(element);
+          swapElements(element, digit, nextDigit, index);
         }, 1200);
       }
     }

@@ -35,9 +35,5 @@ function startAnimation(element, index, timer) {
   }, 1800 * timer);
 }
 
-function myStopFunction(sorter) {
-  clearTimeout(sorter);
-  console.log("lol");
-}
 
 init();

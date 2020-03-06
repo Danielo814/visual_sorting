@@ -22,9 +22,7 @@ function checkClasses(index) {
   // if (index === 0) {
   //   elements[10].classList.remove("active");
   // }
-  // if (index > 0) {
-  //   elements[index - 1].classList.remove("active", "blue-square");
-  // }
+  
 }
 
 function startAnimation(element, index, timer) {

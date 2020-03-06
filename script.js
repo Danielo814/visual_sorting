@@ -1,5 +1,5 @@
 let elements = document.getElementsByClassName("row");
-
+let sorted = false;
 function init() {
   var timer = 0;
   for (let i = 0; i < elements.length; i++) {
@@ -20,15 +20,18 @@ function startAnimation(element, index, timer) {
     }
     if (index !== 10) {
       let digit = parseInt(element.innerHTML, 10);
-
       let nextDigit = parseInt(elements[index + 1].innerHTML, 10);
       if (digit > nextDigit) {
+        sorted = true;
         var swaptimer = setTimeout(function() {
           element.classList.add("blue-square");
           element.innerHTML = nextDigit;
           elements[index + 1].innerHTML = digit;
         }, 1200);
       }
+    }
+    if (sorted === true) {
+      clearTimeout(sort);
     }
     element.classList.add("active");
   }, 1800 * timer);

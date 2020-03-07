@@ -15,7 +15,7 @@ function swapElements(element, digit, nextDigit, index) {
   elements[index + 1].innerHTML = digit;
 }
 
-function checkClasses(index) {
+function removeClasses(index) {
   index === 0
     ? elements[10].classList.remove("active")
     : elements[index - 1].classList.remove("active", "blue-square");
@@ -23,7 +23,7 @@ function checkClasses(index) {
 
 function startAnimation(element, index, timer) {
   var sort = setTimeout(function() {
-    checkClasses(index);
+    removeClasses(index);
     if (index !== 10) {
       let digit = parseInt(element.innerHTML, 10);
       let nextDigit = parseInt(elements[index + 1].innerHTML, 10);
